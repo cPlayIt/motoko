@@ -155,7 +155,7 @@ let n : Nat = await Counter.read();
 Unlike a local function call, which blocks the caller until the callee has returned a result,
 a shared function call immediately returns a future, `f`, without blocking.
 Instead of blocking, a later call to `await f` suspends the current computation until `f` is complete.
-Once the future is completed (by the producer), execution of `await p` resumes with its result.
+Once the future is completed (by the producer), execution of `await f` resumes with its result.
 If the result is a value, `await f` returns that value.
 Otherwise the result is some error, and `await f` propagates the error to the
 consumer of `await f`.
